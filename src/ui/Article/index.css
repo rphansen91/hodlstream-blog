@@ -1,0 +1,24 @@
+.article {
+  display: inline-block;
+  border: 0.2em solid;
+  border-radius: 0.4em;
+  width: 100%;
+  box-shadow: 0.4em 0.1em 1em rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    padding-right: 0;
+  }
+  .sidebar-content {
+    padding-left: 0;
+    overflow-y: auto;
+  }
+  .article-sidebar {
+    height: -webkit-fill-available;
+    padding-bottom: 40px;
+  }
+}

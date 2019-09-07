@@ -1,0 +1,47 @@
+.coin {
+    display: inline-block;
+    margin: 1em;
+  }
+  .coin,
+  .trend {
+    border: 0.2em solid;
+    border-radius: 0.4em;
+    box-shadow: 0.4em 0.1em 1em rgba(0, 0, 0, 0.3);
+    padding: 0.6em;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+  }
+  .trend.active,
+  .trend:hover,
+  .coin:hover,
+  .coin.active {
+    box-shadow: 0.2em 0.05em 1em rgba(0, 0, 0, 0.3);
+  }
+  .icon svg {
+    /* filter: drop-shadow(0.2em 0.2em 0.2em rgba(0,0,0,0.3)); */
+  }
+  
+  .coin-seperator {
+    margin-bottom: 0.4em;
+  }
+  
+  .coin-details {
+    margin-top: 0.4em;
+  }
+  
+  .coin-details p {
+    margin: 0;
+  }
+  
+  .coin-name {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 32em) {
+    .icon svg {
+      filter: none;
+    }
+  }
+  
