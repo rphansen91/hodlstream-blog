@@ -8,17 +8,21 @@ import {
 } from "../../ads/slots";
 import Article from "../Article";
 import withProducts from "./withProducts";
+import { event } from "../../utility/analytics";
 
 function handleCheckout(product) {
   return async function () {
     if (typeof window !== 'undefined') {
       const stripe = window.Stripe("pk_live_TlQEL4Beak0KfzzYxfRjeYsM");
       try {
+        event('product', 'redirect')
         const result = await stripe.redirectToCheckout({
           sessionId: product.session
         });
+        event('product', 'redirectSuccess')
         console.log(result);
       } catch (e) {
+        event('product', 'redirectError')
         console.log(e);
       }
     }

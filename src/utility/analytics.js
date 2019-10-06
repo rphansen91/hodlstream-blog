@@ -2,7 +2,8 @@ const mock = (...args) => console.info('Mocklytics', ...args)
 
 export const active = (fn, name) => {
   return (...args) => {
-    if (process.env.REACT_APP_GA) fn(...args)
+    if (process.env.GATSBY_GA) fn(...args)
+    else if (process.env.REACT_APP_GA) fn(...args)
     else mock(name, ...args)
   }
 }
