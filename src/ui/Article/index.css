@@ -18,6 +18,7 @@
     overflow-y: auto;
   }
   .article-sidebar {
+    max-height: 100vh!important;
     height: -webkit-fill-available;
     padding-bottom: 40px;
   }

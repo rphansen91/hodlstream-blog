@@ -67,6 +67,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
               <Article
                 isActive={isActive}
                 title={a.title}
+                image={i < 4 && a.urlToImage}
                 actions={
                   <CardActions>
                     <Button color="primary" aria-label="Read More">
