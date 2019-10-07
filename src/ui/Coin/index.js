@@ -13,6 +13,7 @@ import btc from "../../utility/btc";
 import Layout from "../Layout";
 import CryptoIcon from "./Icon";
 import Percent from "../Menu/Percent";
+import { Shop } from "../Shop";
 // import Tx from "../../portfolio/Tx";
 // import { Buy } from "../../portfolio/Buy";
 // import { current } from "../../portfolio/compute";
@@ -158,6 +159,7 @@ const Coin = ({ id, name, symbol, data, onRemove, txs, pos, neg, ...props } = {}
 
             <section style={{ marginLeft: 25 }}>
               {/* <Buy crypto_currency={symbol} /> */}
+              <Shop variables={{ q: symbol.toLowerCase() }} />
             </section>
             <BottomBannerDisplayAd />
           </div>

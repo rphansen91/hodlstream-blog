@@ -3,8 +3,8 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 const productsQuery = gql`
-  query Products {
-    products {
+  query Products($q: String) {
+    products(q: $q) {
       name
       amount
       description
@@ -16,7 +16,7 @@ const productsQuery = gql`
 `;
 
 export default Cmp => props => (
-  <Query query={productsQuery}>
+  <Query query={productsQuery} variables={props.variables}>
     {result => <Cmp {...props} {...result} />}
   </Query>
 );

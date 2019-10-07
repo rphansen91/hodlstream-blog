@@ -31,7 +31,7 @@ function handleCheckout(product) {
 
 export const Shop = withProducts(({ products, data }) => (
   <div className="row">
-    {(products || []).map((a, i) => {
+    {(products || (data && data.products) || []).map((a, i) => {
       return (
         <div className="col-lg-4 col-md-6 mb-4" key={i}>
           <Article
