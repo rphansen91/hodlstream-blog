@@ -157,7 +157,7 @@ const Coin = ({ id, name, symbol, data, onRemove, txs, pos, neg, ...props } = {}
               />
             </section>
 
-            <section style={{ marginLeft: 25 }}>
+            <section className="container">
               {/* <Buy crypto_currency={symbol} /> */}
               <Shop variables={{ q: symbol.toLowerCase() }} />
             </section>
