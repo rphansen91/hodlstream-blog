@@ -15,14 +15,14 @@ function handleCheckout(product) {
     if (typeof window !== 'undefined') {
       const stripe = window.Stripe("pk_live_TlQEL4Beak0KfzzYxfRjeYsM");
       try {
-        event('product', 'redirect')
+        event('product', 'redirect', product.name)
         const result = await stripe.redirectToCheckout({
           sessionId: product.session
         });
-        event('product', 'redirectSuccess')
+        event('product', 'redirectSuccess', product.name)
         console.log(result);
       } catch (e) {
-        event('product', 'redirectError')
+        event('product', 'redirectError', product.name)
         console.log(e);
       }
     }
