@@ -159,7 +159,7 @@ const Coin = ({ id, name, symbol, data, onRemove, txs, pos, neg, ...props } = {}
 
             <section className="container">
               {/* <Buy crypto_currency={symbol} /> */}
-              <Shop variables={{ q: symbol.toLowerCase() }} />
+              <Shop variables={{ q: (symbol || '').toLowerCase() }} />
             </section>
             <BottomBannerDisplayAd />
           </div>

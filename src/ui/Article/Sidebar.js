@@ -40,7 +40,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
 
     {loading && <CircularProgress style={{ margin: "auto" }} />}
     {data.blockQl && (data.blockQl.news || []).filter(filter).reduce((acc, a, i) => {
-          if (i % 2 === 0) {
+          if (i && i % 2 === 0) {
             acc.push(
               <NewsDisplayAd
                 style={{

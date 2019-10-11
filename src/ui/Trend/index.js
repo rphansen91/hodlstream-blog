@@ -77,12 +77,13 @@ const Trend = ({
         />
         <div className="coin-details">
           <p className="coin-name">{name}</p>
-          <p>{usd.display(coin.price_usd)} USD</p>
-          <p>{btc.display(coin.price_btc)} BTC</p>
+          {coin.price_usd ? <p>{usd.display(coin.price_usd)} USD</p> : <p>&nbsp;</p>}
+          {coin.price_btc ? <p>{btc.display(coin.price_btc)} BTC</p> : <p>&nbsp;</p>}
           <div className="coin-seperator" />
-          <Percent value={coin.percent_change_24h} pos={pos} neg={neg} />
+          {coin.percent_change_24h ? <Percent value={coin.percent_change_24h} pos={pos} neg={neg} /> : null}
         </div>
       </div>
+      <div className="position-relative">
       {showTrend !== false ? 
         <Line
           title={name}
@@ -92,6 +93,10 @@ const Trend = ({
           colors={[color]}
         />
       : null}
+      {/* {coin.price_usd ? null : <div className="position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style={{ top: 0, left: 0, backgroundColor: 'rgba(0,0,0,0.2)' }}>
+        <p className="coin-name">Currently Unavailable</p>
+      </div>} */}
+      </div>
     </div>
   );
 };
