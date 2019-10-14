@@ -3,7 +3,7 @@ title: Scratch Paper
 publishedAt: 2019-10-06
 description: Scratch Paper takes the concept of excercises from classical education and applies a reward system from staked ERC20 tokens to incentize readers to dig deeper into the project and utilize it's technology.
 author: Ryan P. Hansen
-# urlToImage: Ryan P. Hansen
+urlToImage: ""
 sourceName: Hodl Stream
 path: /scratch-paper
 ---
