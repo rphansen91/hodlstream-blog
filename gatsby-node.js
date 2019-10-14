@@ -71,7 +71,7 @@ async function createMarkdownPages ({ actions, graphql }) {
   const result = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___publishedAt] }
         limit: 1000
       ) {
         edges {

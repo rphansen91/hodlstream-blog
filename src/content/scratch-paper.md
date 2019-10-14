@@ -1,6 +1,10 @@
 ---
 title: Scratch Paper
-date: 2019-10-06
+publishedAt: 2019-10-06
+description: Scratch Paper takes the concept of excercises from classical education and applies a reward system from staked ERC20 tokens to incentize readers to dig deeper into the project and utilize it's technology.
+author: Ryan P. Hansen
+# urlToImage: Ryan P. Hansen
+sourceName: Hodl Stream
 path: /scratch-paper
 ---
 The first thing any new Crypto Currency start up begins with is a "white paper". These are popular in the academic community but for common investors not enough to drive usage of the underlying concepts. Scratch Paper takes the concept of excercises from classical education and applies a reward system from staked ERC20 tokens to incentize readers to dig deeper into the project and utilize it's technology.

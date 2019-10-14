@@ -1,6 +1,10 @@
 ---
 title: My First Post
-date: 2019-07-10
+publishedAt: 2019-07-10
+description: This is my first Gatsby post written in Markdown!
+author: Ryan P. Hansen
+# urlToImage: Ryan P. Hansen
+sourceName: Hodl Stream
 path: /my-first-post
 ---
 This is my first Gatsby post written in Markdown!

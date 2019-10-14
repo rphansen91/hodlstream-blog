@@ -59,7 +59,7 @@ function SimpleMediaCard(props) {
             textAlign: "left"
           }}
         >
-          <Typography variant="subtitle1" color="textPrimary" component="p">
+          <Typography variant="subtitle1" color="textPrimary" component="p" style={{lineHeight: 1}}>
             {title}
           </Typography>
         </CardContent>
