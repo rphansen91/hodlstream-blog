@@ -1,0 +1,15 @@
+.skeleton {
+    background-color: rgba(0, 0, 0, 0.08);
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+@keyframes skeleton {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}

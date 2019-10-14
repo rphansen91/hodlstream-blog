@@ -18,7 +18,8 @@ export default class extends Component {
   }
 
   renderChart () {
-    requestAnimationFrame(() => {
+    if (this.frame) cancelAnimationFrame(this.frame)
+    this.frame = requestAnimationFrame(() => {
       Promise.resolve()
       .then(() => this.chartOpts())
       .then((chart) => this.renderer(chart))
@@ -30,21 +31,15 @@ export default class extends Component {
   }
 
   render () {
-    return <div id={this.id}></div>
+    return <div id={this.id} style={this.props.style}></div>
   }
 }
 
 function render (id) {
   let prevChart = null
   return function (chart) {
-    if (chart === prevChart) return
-
-    try {
-      Highcharts.chart(id, chart)
-      prevChart = chart
-    } catch (err) {
-      console.log(err)
-      prevChart = null
-    }
+    if (prevChart === chart) return
+    Highcharts.chart(id, chart)
+    prevChart = chart
   }
 }

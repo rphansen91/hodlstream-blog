@@ -1,10 +1,13 @@
 require("dotenv").config({
-  path: `.env.server.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.NODE_ENV}`,
 })
+
+console.log(process.env.GATSBY_APOLLO)
 
 module.exports = {
   siteMetadata: {
     title: `Hodl Stream`,
+    siteUrl: `https://hodlstream.com`,
     description: `Flow with the markets. Build your portfolio today.`,
     author: `@rphansen91`,
   },
@@ -40,6 +43,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -55,7 +59,7 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: "blockQl",
         // Url to query from
-        url: "https://laqr73ujn2.execute-api.us-east-1.amazonaws.com/dev/graphql",
+        url: process.env.GATSBY_APOLLO,
       },
     },
     {

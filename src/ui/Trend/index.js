@@ -7,6 +7,7 @@ import Percent from "../Menu/Percent";
 import CryptoIcon from "../Coin/Icon";
 import Line from "../../charts/Line";
 import { useTheme } from "@material-ui/styles";
+import Typography from "@material-ui/core/Typography"
 import "./Coin.css";
 
 const trendQuery = gql`
@@ -75,22 +76,43 @@ const Trend = ({
           attrs={{ fill: color }}
           style={{ height: "4em" }}
         />
-        <div className="coin-details">
-          <p className="coin-name">{name}</p>
-          {coin.price_usd ? <p>{usd.display(coin.price_usd)} USD</p> : <p>&nbsp;</p>}
-          {coin.price_btc ? <p>{btc.display(coin.price_btc)} BTC</p> : <p>&nbsp;</p>}
-          <div className="coin-seperator" />
-          {coin.percent_change_24h ? <Percent value={coin.percent_change_24h} pos={pos} neg={neg} /> : null}
-        </div>
+        <Typography variant="h1" color="textPrimary">
+          {name}
+        </Typography>
+        {props.loading ? (
+          <div className="coin-details">
+            <Typography type="body1" variant="subtitle1" color="textSecondary" className="skeleton mx-auto mb-1" style={{ width: 120 }}>
+              &nbsp;
+            </Typography>
+            <Typography type="body2" variant="subtitle2" color="textSecondary" className="skeleton mx-auto mb-4" style={{ width: 100 }}>
+              &nbsp;
+            </Typography>
+          </div>) : (
+          <div className="coin-details">
+            <Typography type="body1" variant="subtitle1" color="textSecondary">
+              {usd.display(coin.price_usd)} USD
+            </Typography>
+            <Typography type="body2" variant="subtitle2" color="textSecondary">
+              {btc.display(coin.price_btc)} BTC
+            </Typography>
+            <div className="coin-seperator" />
+            <Percent value={coin.percent_change_24h} pos={pos} neg={neg} />
+          </div>
+          )}
       </div>
       <div className="position-relative">
-      {showTrend !== false ? 
-        <Line
+      {showTrend !== false ? props.loading ?
+        <div
+        className="d-block skeleton"
+        style={{ height: 240 }}
+      ></div>
+        : <Line
           title={name}
           name={`trend-${id}`}
           subtitle={coin.price_usd}
           series={{ [symbol]: series }}
           colors={[color]}
+          style={{ height: 240 }}
         />
       : null}
       {/* {coin.price_usd ? null : <div className="position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style={{ top: 0, left: 0, backgroundColor: 'rgba(0,0,0,0.2)' }}>

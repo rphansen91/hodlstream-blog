@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-// import { setProfile } from "../../store/reducers/profile";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import Button from "@material-ui/core/Button";
@@ -9,12 +8,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import { Link } from "gatsby";
 import Switch from "@material-ui/core/Switch";
-import { useTheme } from "@material-ui/styles";
+import { useProfile } from "../../components/profile"
 // import storage from "../../utility/storage";
 // import Exchange from "../Exchange";
 
-export default ({ profile = { theme: 'light' }, setProfile }) => {
-  const theme = useTheme();
+export default () => {
+  const [{ theme }, setProfileValue] = useProfile()
   return (
     <div>
       <section>
@@ -46,16 +45,13 @@ export default ({ profile = { theme: 'light' }, setProfile }) => {
             </Typography>
             <FormGroup>
               <FormControlLabel
-                label={profile.theme !== "light" ? "Dark" : "Light"}
+                label={theme !== "light" ? "Dark" : "Light"}
                 control={
                   <Switch
                     color="primary"
-                    checked={profile.theme !== "light"}
+                    checked={theme !== "light"}
                     onChange={(event, checked) => {
-                      const p = Object.assign({}, p, {
-                        theme: checked ? "dark" : "light"
-                      });
-                      setProfile(p);
+                      setProfileValue('theme', checked ? "dark" : "light");
                     }}
                   />
                 }

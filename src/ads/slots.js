@@ -4,7 +4,7 @@ import Ad from "./Ad";
 export const TopBannerDisplayAd = () => (
   <Ad>
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
-      <ins class="adsbygoogle top-banner-display-ad"
+      <ins className="adsbygoogle top-banner-display-ad"
         style={{ display: "inline-block", height: 90, width: "100%" }}
         data-ad-client="ca-pub-7183056818143738"
         data-ad-slot="3387340853"></ins>

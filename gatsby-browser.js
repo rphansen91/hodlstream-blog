@@ -8,16 +8,19 @@
 
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
+import { ProfileProvider } from './src/components/profile'
 import ApolloClient from 'apollo-boost'
 import fetch from 'isomorphic-fetch'
 
 const client = new ApolloClient({
-  uri: 'https://laqr73ujn2.execute-api.us-east-1.amazonaws.com/dev/graphql',
+  uri: process.env.GATSBY_APOLLO,
   fetch
 })
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <ApolloProvider client={client}>{element}</ApolloProvider>
+    <ProfileProvider>
+      <ApolloProvider client={client}>{element}</ApolloProvider>
+    </ProfileProvider>
   )
 }
