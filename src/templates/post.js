@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import Post from "../ui/Post";
 import { graphql } from "gatsby"
 
-export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html: htmlContent } = markdownRemark
-  console.log({ frontmatter })
+export default function Template({ data, error }) {
+  const { markdownRemark } = data || {}// data.markdownRemark holds your post data
+  const { frontmatter, html: htmlContent } = markdownRemark || {}
+  console.log({ frontmatter, error })
   return (
     <Layout>
       <Post post={{ ...frontmatter, htmlContent }} />
