@@ -22,7 +22,7 @@ export default (({ coins, pair }) => (
           <div className="row">
             {coins.map(c => (
               <div className="col-lg-6 mb-3" key={c.id}>
-                <Link to={`/coin/${c.id}`}>
+                <Link to={`/coin/${c.id}/`}>
                   <Trend
                     id={c.id}
                     name={c.name}

@@ -28,7 +28,7 @@ export default ({ data }) => (
                             <Link
                                 aria-label="Read More"
                                 className="d-block"
-                                to={`/post/${a.id}`}
+                                to={`/post/${a.id}/`}
                             >
                                 <Article
                                     imageSize={160}

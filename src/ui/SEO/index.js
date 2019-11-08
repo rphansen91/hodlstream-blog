@@ -90,10 +90,6 @@ export default ({
       twitter
     })}
   >
-    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async />
-    <script src="https://cdn.subscribers.com/assets/subscribers.js" async />
-    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-555b3dd213990409" async />
-    <script src="https://js.stripe.com/v3/" async />
     <script>{`
       (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-7183056818143738",

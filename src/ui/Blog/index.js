@@ -35,7 +35,7 @@ export const Blog = compose(
                   aria-label="Read More"
                   className="d-block"
                   onClick={() => setPost(a)}
-                  to={`/post/${a.publishedAt}`}
+                  to={`/post/${a.publishedAt}/`}
                 >
                   <Article
                     imageSize={160}

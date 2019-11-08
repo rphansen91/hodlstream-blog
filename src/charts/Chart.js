@@ -39,6 +39,7 @@ function render (id) {
   let prevChart = null
   return function (chart) {
     if (prevChart === chart) return
+    console.log('Render chart', id, chart)
     Highcharts.chart(id, chart)
     prevChart = chart
   }

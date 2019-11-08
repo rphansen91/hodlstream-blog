@@ -33,7 +33,7 @@ export const MainListItems = (props => (
         </ListItemText>
       </ListItem>
     </Link>
-    <Link to="/blog" aria-label="blog">
+    <Link to="/blog/" aria-label="blog">
       <ListItem button>
         <ListItemIcon>
           <NoteIcon />
@@ -43,7 +43,7 @@ export const MainListItems = (props => (
         </ListItemText>
       </ListItem>
     </Link>
-    <Link to="/shop" aria-label="shop">
+    <Link to="/shop/" aria-label="shop">
       <ListItem button>
         <ListItemIcon>
           <StoreIcon />
@@ -53,7 +53,7 @@ export const MainListItems = (props => (
         </ListItemText>
       </ListItem>
     </Link>
-    <Link to="/coins" aria-label="coins">
+    <Link to="/coins/" aria-label="coins">
       <ListItem button>
         <ListItemIcon>
           <MoneyIcon />
@@ -78,7 +78,7 @@ export const MainListItems = (props => (
 
 export const OtherListItems = (props => (
   <List className={props.className || ""}>
-    <Link to="/about" aria-label="about">
+    <Link to="/about/" aria-label="about">
       <ListItem button>
         <ListItemIcon>
           <HelpIcon />
@@ -89,7 +89,7 @@ export const OtherListItems = (props => (
         </ListItemText>
       </ListItem>
     </Link>
-    <Link to="/settings" aria-label="settings">
+    <Link to="/settings/" aria-label="settings">
       <ListItem button>
         <ListItemIcon>
           <SettingsIcon />

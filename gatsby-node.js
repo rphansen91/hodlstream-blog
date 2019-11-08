@@ -26,7 +26,7 @@ async function createCoinPages ({ actions, graphql }) {
 
   coinsResult.data.blockQl.all_coins.forEach((coin) => {
     createPage({
-      path: `coin/${coin.id}`,
+      path: `coin/${coin.id}/`,
       component: coinTemplate,
       context: {
         id: coin.id
@@ -56,7 +56,7 @@ async function createArticlePages ({ actions, graphql }) {
 
   articlesResult.data.blockQl.news.forEach((article) => {
     createPage({
-      path: `post/${article.publishedAt}`,
+      path: `post/${article.publishedAt}/`,
       component: articlePostTemplate,
       context: {
         id: article.publishedAt

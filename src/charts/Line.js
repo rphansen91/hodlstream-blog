@@ -27,9 +27,11 @@ function line ({
 }) {
   const events = { click: onClick || logPoint }
   return {
+    
     chart: {
       zoomType: 'x',
-      backgroundColor: 'rgba(0,0,0,0)'
+      backgroundColor: 'rgba(0,0,0,0)',
+      animation: false,
     },
 
     colors: colors,
@@ -67,6 +69,7 @@ function line ({
       events,
       type: 'area',
       data: series[name],
+      animation: false,
       fillColor: {
         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
         stops: [

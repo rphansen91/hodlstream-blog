@@ -62,7 +62,7 @@ export default () => {
           <section>
             <List>
               <ListItem>
-                <Link aria-label="terms" to="/terms">
+                <Link aria-label="terms" to="/terms/">
                   <Button variant="contained">Terms and Conditions</Button>
                 </Link>
               </ListItem>

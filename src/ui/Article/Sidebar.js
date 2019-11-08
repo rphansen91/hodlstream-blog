@@ -39,7 +39,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
     </Typography>
 
     {loading && <CircularProgress style={{ margin: "auto" }} />}
-    {data.blockQl && (data.blockQl.news || []).filter(filter).reduce((acc, a, i) => {
+    {data.blockQl && (data.blockQl.news || []).filter(filter).slice(0, 6).reduce((acc, a, i) => {
           if (i && i % 2 === 0) {
             acc.push(
               <NewsDisplayAd
@@ -61,7 +61,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
             <Link
               aria-label="Read More"
               className="d-block p-2"
-              to={`/post/${a.publishedAt}`}
+              to={`/post/${a.publishedAt}/`}
               key={i}
             >
               <Article

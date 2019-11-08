@@ -7,7 +7,8 @@ export const TopBannerDisplayAd = () => (
       <ins className="adsbygoogle top-banner-display-ad"
         style={{ display: "inline-block", height: 90, width: "100%" }}
         data-ad-client="ca-pub-7183056818143738"
-        data-ad-slot="3387340853"></ins>
+        data-ad-slot="3387340853"
+        data-full-width-responsive="true"></ins>
     </div>
   </Ad>
 )
@@ -29,10 +30,10 @@ export const TopBannerDisplayAd = () => (
 
 export const BottomBannerDisplayAd = () => (
   <Ad>
-    <div style={{ display: "block" }}>
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
       <ins
         className="adsbygoogle bottom-banner-display-ad"
-        style={{ display: "block" }}
+        style={{ display: "inline-block", height: 90, width: "100%" }}
         data-ad-client="ca-pub-7183056818143738"
         data-ad-slot="9637764870"
         data-ad-format="auto"

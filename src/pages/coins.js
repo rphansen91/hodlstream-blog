@@ -22,7 +22,7 @@ export default ({ data }) => (
         <div className="row">
             {data.blockQl.all_coins.map((coin) => (
                 <div className="col-md-4 mb-3" key={coin.id}>
-                    <Link to={`/coin/${coin.id}`}>
+                    <Link to={`/coin/${coin.id}/`}>
                         <Trend {...coin} pair="USD" showTrend={false} />
                     </Link>
                 </div>

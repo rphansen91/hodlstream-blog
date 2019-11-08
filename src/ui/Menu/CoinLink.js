@@ -34,7 +34,7 @@ export default ({ open, id }) => {
       {({ data }) => {
         const coin = data && data.coin ? data.coin : defaultCoin(id)
         return (
-          <Link aria-label={coin.symbol} to={"/coin/" + id}>
+          <Link aria-label={coin.symbol} to={`/coin/${id}/`}>
             <ListItem button>
               <ListItemIcon>
                 <CryptoIcon icon={coin.symbol} style={iconStyle} />
