@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-material-ui',
+    'gatsby-theme-material-ui',
     'gatsby-plugin-svg-sprite',
     {
       resolve: `gatsby-plugin-google-analytics`,

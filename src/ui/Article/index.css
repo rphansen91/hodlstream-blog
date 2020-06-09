@@ -9,10 +9,11 @@
   box-sizing: border-box;
 }
 
+.main-content {
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
-  .main-content {
-    padding: 0;
-  }
   .sidebar-content {
     padding: 0;
     overflow-y: auto;

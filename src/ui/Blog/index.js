@@ -44,7 +44,7 @@ export const Blog = compose(
                     style={{ width: "100%" }}
                     actions={
                       <CardActions>
-                        <Button color="primary" aria-label="Read More">
+                        <Button color="secondary" aria-label="Read More" variant="outlined">
                           Read More
                         </Button>
                       </CardActions>
@@ -74,7 +74,7 @@ export default () => (
       Blog
     </Typography>
     <section />
-    <section className="container">
+    <section className="container-fluid">
       <Blog />
     </section>
     <BottomBannerDisplayAd />

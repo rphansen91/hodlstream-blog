@@ -19,7 +19,7 @@ export default function Crypto101LongForm() {
       <div className="container-fluid">
         <div className="row bg-dark text-white pt-5">
           <div className="col-12 col-md-5 offset-md-1 text-center d-flex justify-content-center flex-column mb-5">
-            <h2 className="mb-3">
+            <h2 style={{ marginBottom: '0.3rem' }}>
               Immerse yourself and learn lessons that cost others many thousands
               of dollars.
             </h2>

@@ -9,6 +9,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import orderBy from 'lodash/orderBy'
 
 export const query = graphql`
 query Sidebar {
@@ -39,7 +40,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
     </Typography>
 
     {loading && <CircularProgress style={{ margin: "auto" }} />}
-    {data.blockQl && (data.blockQl.news || []).filter(filter).slice(0, 6).reduce((acc, a, i) => {
+    {orderBy(data.blockQl && (data.blockQl.news || []), 'publishedAt', 'desc').filter(filter).slice(0, 6).reduce((acc, a, i) => {
           if (i && i % 2 === 0) {
             acc.push(
               <NewsDisplayAd
@@ -60,7 +61,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
           acc.push(
             <Link
               aria-label="Read More"
-              className="d-block p-2"
+              style={{ padding: '12px 24px', display: 'block' }}
               to={`/post/${a.publishedAt}/`}
               key={i}
             >
@@ -70,7 +71,7 @@ export default ({ q, activePost, loading, error, filter = v => v }) => {
                 image={i < 4 && a.urlToImage}
                 actions={
                   <CardActions>
-                    <Button color="primary" aria-label="Read More">
+                    <Button color="primary" aria-label="Read More" variant="contained" color="secondary">
                       {isActive ? "Currently Reading" : "Read More"}
                     </Button>
                   </CardActions>

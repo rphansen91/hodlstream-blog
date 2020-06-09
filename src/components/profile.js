@@ -18,7 +18,7 @@ const setItem = (name, value) => {
 }
 
 const initialValue = {
-    theme: getItem('theme') || 'light'
+    theme: getItem('theme') || 'dark'
 }
 
 export const ProfileContext = createContext([initialValue, () => {}])

@@ -8,7 +8,7 @@ export default function Template({ data }) {
   const article = data.blockQl.article
   return (
     <Layout>
-        <Post post={article} />
+        <Post post={article} path={`/post/${article.publishedAt}`} />
     </Layout>
   )
 }

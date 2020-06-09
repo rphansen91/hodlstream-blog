@@ -7,6 +7,7 @@ import Percent from "../Menu/Percent";
 import CryptoIcon from "../Coin/Icon";
 import Line from "../../charts/Line";
 import { useTheme } from "@material-ui/styles";
+import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import "./Coin.css";
 
@@ -62,7 +63,7 @@ const Trend = ({
   ]);
   const color = theme.palette.text.secondary;
   return (
-    <div
+    <Paper
       className={["trend"]
         .concat(className)
         .filter(c => c)
@@ -70,7 +71,7 @@ const Trend = ({
       style={{ color }}
       {...props}
     >
-      <div className="coin-header text-center">
+      <div className="coin-header text-center" style={{ textAlign: 'center' }}>
         <CryptoIcon
           icon={symbol}
           attrs={{ fill: color }}
@@ -81,10 +82,10 @@ const Trend = ({
         </Typography>
         {props.loading ? (
           <div className="coin-details">
-            <Typography type="body1" variant="subtitle1" color="textSecondary" className="skeleton mx-auto mb-1" style={{ width: 120 }}>
+            <Typography type="body1" variant="subtitle1" color="textSecondary" className="skeleton" style={{ width: 120, margin: 'auto', marginBottom: 8 }}>
               &nbsp;
             </Typography>
-            <Typography type="body2" variant="subtitle2" color="textSecondary" className="skeleton mx-auto mb-4" style={{ width: 100 }}>
+            <Typography type="body2" variant="subtitle2" color="textSecondary" className="skeleton" style={{ width: 100, margin: 'auto', marginBottom: 32 }}>
               &nbsp;
             </Typography>
           </div>) : (
@@ -100,7 +101,7 @@ const Trend = ({
           </div>
           )}
       </div>
-      <div className="position-relative">
+      <div style={{ position: 'relative' }}>
       {showTrend !== false ? props.loading ?
         <div
         className="d-block skeleton"
@@ -119,7 +120,7 @@ const Trend = ({
         <p className="coin-name">Currently Unavailable</p>
       </div>} */}
       </div>
-    </div>
+    </Paper>
   );
 };
 

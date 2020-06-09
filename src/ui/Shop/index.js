@@ -1,5 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import CardActions from "@material-ui/core/CardActions";
 import {
@@ -31,10 +33,10 @@ function handleCheckout(product) {
 }
 
 export const Shop = withProducts(({ products, data }) => (
-  <div className="row">
+  <Grid container spacing={3}>
     {(products || (data && data.products) || []).map((a, i) => {
       return (
-        <div className="col-lg-4 col-md-6 mb-4" key={i}>
+        <Grid item lg={3} md={4} xs={12} key={i}>
           <Article
             onClick={data.products && data.products[i] && handleCheckout(data.products[i])}
             imageSize={260}
@@ -63,23 +65,23 @@ export const Shop = withProducts(({ products, data }) => (
               </CardActions>
             }
           />
-        </div>
+        </Grid>
       );
     })}
-  </div>
+  </Grid>
 ));
 
 export default ({ products }) => (
   <div>
     <TopBannerDisplayAd />
-    <section />
-    <Typography variant="h4" color="textPrimary" className="text-center">
-      Shop
-    </Typography>
-    <section />
-    <section className="container">
+    <Box pt={3}>
+      <Typography variant="h4" color="textPrimary" className="text-center">
+        Shop
+      </Typography>
+    </Box>
+    <Box p={3}>
       <Shop products={products} />
-    </section>
+    </Box>
     <BottomBannerDisplayAd />
   </div>
 );

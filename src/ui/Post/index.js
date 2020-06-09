@@ -12,6 +12,8 @@ import AddThis from "../AddThis";
 // import withArticles from "../Article/withArticles";
 import Layout from "../Layout";
 import SEO from "../SEO";
+import Container from "@material-ui/core/Container";
+import Divider from "@material-ui/core/Divider";
 
 const first = a => a && a[0];
 
@@ -29,28 +31,27 @@ const Post = ({ loading, post = {}, path }) => {
           />
           <TopBannerDisplayAd />
           {loading && <CircularProgress />}
-          <section className="text-center">
-            {post.urlToImage && (
-              <img
-                alt={post.title}
-                src={post.urlToImage}
-                className="img-fluid"
-              />
-            )}
-          </section>
-          <section className="container">
+          {post.urlToImage && (
+            <img
+              alt={post.title}
+              src={post.urlToImage}
+              style={{ width: '100%' }}
+            />
+          )}
+          <Container>
+          <section style={{ padding: '0.3em' }}>
             <Typography paragraph variant="h1" color="textPrimary">
               {post.title}
             </Typography>
 
-            <div className="d-flex border-bottom pb-2 mb-4">
-              <div className="text-left">
+            <div style={{ display: 'flex', paddingBottom: '0.2em', marginBottom: '0.4em' }}>
+              <div style={{ textAlign: 'left' }}>
                 <Typography
                   variant="caption"
                   color="textSecondary"
-                  className="d-block"
+                  style={{ display: 'block' }}
                 >
-                  <PersonIcon className="mr-1" />
+                  <PersonIcon style={{ marginRight: '0.1em' }} />
                   {post.author}
                   {post.source && post.source.name ? " - " : ""}
                   {post.source && post.source.name ? post.source.name : ""}
@@ -58,16 +59,17 @@ const Post = ({ loading, post = {}, path }) => {
                 <Typography
                   variant="caption"
                   color="textSecondary"
-                  className="d-block"
+                  style={{ display: 'block' }}
                 >
-                  <TimelapseIcon className="mr-1" />
+                  <TimelapseIcon style={{ marginRight: '0.1em' }} />
                   {post.publishedAt
                     ? new Date(post.publishedAt).toLocaleString()
                     : ""}
                 </Typography>
               </div>
-              <div className="flex-grow-1" />
+              <div style={{ flexGrow: 1 }} />
               <div className="addthis_inline_share_toolbox" />
+              <Divider />
             </div>
 
             <Typography variant="subtitle1" color="textSecondary">
@@ -84,6 +86,7 @@ const Post = ({ loading, post = {}, path }) => {
           </section>
           <BottomBannerDisplayAd />
           <AddThis />
+          </Container>
         </div>
       }
       sidebar={<ArticleSidebar activePost={post} />}

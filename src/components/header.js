@@ -51,9 +51,6 @@ const Header = ({ menu, toggleMenu }) => <AppBar
     </Link>
     {/* <Pairs style={{ width: 70 }} /> */}
   </Toolbar>
-  <MuiThemeProvider theme={darkTheme}>
-    <div id="jumbotron" />
-  </MuiThemeProvider>
 </AppBar>
 
 Header.propTypes = {

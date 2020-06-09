@@ -1,27 +1,35 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Trend from "../Trend";
-import coinColor from "./colors";
+import React from "react"
+import Container from "@material-ui/core/Container"
+import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
+import Grid from "@material-ui/core/Grid"
+import Trend from "../Trend"
+import coinColor from "./colors"
 // import Add from "../../portfolio/Add";
-import { TopBannerDisplayAd, BottomBannerDisplayAd } from "../../ads/slots";
-import Layout from "../Layout";
+import { TopBannerDisplayAd, BottomBannerDisplayAd } from "../../ads/slots"
+import Layout from "../Layout"
 import { Link } from "gatsby"
-import ArticleSidebar from "../Article/Sidebar";
-import "./style.css";
+import ArticleSidebar from "../Article/Sidebar"
+import "./style.css"
 
-export default (({ coins, pair }) => (
+export default ({ coins, pair }) => (
   <Layout
     content={
-      <div>
+      <>
         <TopBannerDisplayAd />
         <section />
-        <div className="container">
-          <Typography variant="h4" color="textPrimary" className="text-center mb-3">
-            Trends
-          </Typography>
-          <div className="row">
+        <Typography
+          variant="h4"
+          color="textPrimary"
+          align="center"
+          style={{ marginBottom: "0.3rem" }}
+        >
+          Trends
+        </Typography>
+        <Box p={3}>
+          <Grid container spacing={3}>
             {coins.map(c => (
-              <div className="col-lg-6 mb-3" key={c.id}>
+              <Grid item xs={12} lg={6} key={c.id}>
                 <Link to={`/coin/${c.id}/`}>
                   <Trend
                     id={c.id}
@@ -32,18 +40,18 @@ export default (({ coins, pair }) => (
                     color={coinColor(c.id)}
                   />
                 </Link>
-              </div>
+              </Grid>
             ))}
-            <div className="col-lg-6 mb-3">
+            <Grid item xs={12} lg={6}>
               {/* <div className="trend h-100"> */}
-                {/* <Add /> */}
+              {/* <Add /> */}
               {/* </div> */}
-            </div>
-          </div>
-        </div>
+            </Grid>
+          </Grid>
+        </Box>
         <BottomBannerDisplayAd />
-      </div>
+      </>
     }
     sidebar={<ArticleSidebar />}
   />
-));
+)

@@ -779,6 +779,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.10.2":
+  version "7.10.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
+  integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
@@ -3338,6 +3345,11 @@ camel-case@3.0.x:
   dependencies:
     no-case "^2.2.0"
     upper-case "^1.1.1"
+
+camelcase-css@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
+  integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
 camelcase-keys@^2.0.0:
   version "2.1.0"
@@ -6148,6 +6160,15 @@ fs-extra@^7.0.0, fs-extra@^7.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^8.0.1:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -6284,6 +6305,11 @@ gatsby-link@^2.2.5:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-material-ui-components@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-material-ui-components/-/gatsby-material-ui-components-1.0.0.tgz#06015ab449de4501ae4f65225ecf9a45283910d3"
+  integrity sha512-/Wa5S6+hL3u3aAoq7qlh/WhQYkgkEcuXr4uCjY55RFNlz5Q1fvx8vOvdRNf8lSzt5t8RmhkguHlJKGa3SXw3kQ==
+
 gatsby-page-utils@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.5.tgz#faefc2ece9f14bfd161ddd0104d1e12b54ef7a70"
@@ -6297,6 +6323,14 @@ gatsby-page-utils@^0.0.5:
     lodash "^4.17.14"
     micromatch "^3.1.10"
     slash "^1.0.0"
+
+gatsby-plugin-compile-es6-packages@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-compile-es6-packages/-/gatsby-plugin-compile-es6-packages-2.1.0.tgz#eb6068d8936fd8b404716e47b821d09bf0656af7"
+  integrity sha512-yrYAAjabHWJr3ARi8xzDm01dbBfyOxEWTwGkL3BMdgL/opfLvTrwLmfium4kSelnLs70DYY3rYDwyHjqyFsnFQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    regex-escape "^3.4.8"
 
 gatsby-plugin-google-analytics@^2.1.11:
   version "2.1.11"
@@ -6314,6 +6348,15 @@ gatsby-plugin-manifest@^2.2.5:
     gatsby-core-utils "^1.0.4"
     semver "^5.6.0"
     sharp "^0.22.1"
+
+gatsby-plugin-material-ui@^2.1.4:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-material-ui/-/gatsby-plugin-material-ui-2.1.9.tgz#f0e4366f99475ba4ca4c7a6c6026c7546e25170e"
+  integrity sha512-bvfAEOugCyDgVY9ZNadnC+RP20qA/G2mMDnoj25hRf98fcTtP128s1DshoeYZF61w46Mqp6ACB+uZtrG6iWDfQ==
+  dependencies:
+    autoprefixer "^9.6.1"
+    clean-css "^4.2.1"
+    postcss "^7.0.17"
 
 gatsby-plugin-material-ui@^2.1.5:
   version "2.1.5"
@@ -6348,6 +6391,13 @@ gatsby-plugin-page-creator@^2.1.5:
     glob "^7.1.1"
     lodash "^4.17.14"
     micromatch "^3.1.10"
+
+gatsby-plugin-react-helmet@^3.1.2:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.3.3.tgz#85f2c2b1ee404dfc35e1f7596edba7438900fc56"
+  integrity sha512-GaNBEZlOUY0kYGMjlh3Cpretn5yBkgQZi+Z2ZpJL7VdxlrgTl7B5lccGZDxteMu5QAgrM/WVkeEOvkKUE6ZxrQ==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
 
 gatsby-plugin-react-helmet@^3.1.3:
   version "3.1.3"
@@ -6436,6 +6486,18 @@ gatsby-plugin-svg-sprite@^2.0.1:
   integrity sha512-HOioTgkKZpOkWoIK2WTXi4IEOjgs3M4K2kiIpNv0BXHAmqMpOZrbx2coWffUvjNmEnZFDK7ALkiICPrgNtV4Rg==
   dependencies:
     svg-sprite-loader "^4.1.3"
+
+gatsby-plugin-webfonts@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-webfonts/-/gatsby-plugin-webfonts-1.1.2.tgz#e2a26d4191d916e275d741da55419ae66bb54241"
+  integrity sha512-gdX4ghPSk25Rv5ol4KxGjE7hkfJb0TJLiCzzYfAlY49QC2+GNULZ58/NBYWyQQc4yvKWOSuHZsSPtDWQHNRzHg==
+  dependencies:
+    axios "^0.19.0"
+    cssnano "^4.1.10"
+    fs-extra "^8.0.1"
+    lodash.isempty "^4.4.0"
+    postcss "^7.0.17"
+    postcss-js "^2.0.1"
 
 gatsby-react-router-scroll@^2.1.3:
   version "2.1.3"
@@ -6533,6 +6595,25 @@ gatsby-telemetry@^1.1.11:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.3.2"
+
+gatsby-theme-material-ui-top-layout@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-material-ui-top-layout/-/gatsby-theme-material-ui-top-layout-1.0.2.tgz#fdbb1b00af1a6e322fac76c1f99162f15970cb95"
+  integrity sha512-EY4kiJRYa+Hj2EbusfZUNIBLYvli64zW6WdyjPWuJuL32UotGJlQafX+HiOx/f4jNcqNphCIVNAasQnn93Mn6g==
+  dependencies:
+    gatsby-plugin-react-helmet "^3.1.2"
+
+gatsby-theme-material-ui@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-material-ui/-/gatsby-theme-material-ui-1.0.10.tgz#87a49dd3f9cb62731d45d899369679c63739e776"
+  integrity sha512-5qtBtE9nDtsD+UHRaus+YvyROV1zr0w73VgjqDt7O0mKV4mqZR8RDxS3lk2oul8COc168/Q4OddWguJTMq1Q5Q==
+  dependencies:
+    gatsby-material-ui-components "^1.0.0"
+    gatsby-plugin-compile-es6-packages "^2.1.0"
+    gatsby-plugin-material-ui "^2.1.4"
+    gatsby-plugin-webfonts "^1.1.2"
+    gatsby-theme-material-ui-top-layout "^1.0.2"
+    react-helmet "^6.0.0"
 
 gatsby-transformer-remark@^2.6.14:
   version "2.6.14"
@@ -7064,6 +7145,11 @@ graceful-fs@^4.1.9:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
   integrity sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
+
+graceful-fs@^4.2.0:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
+  integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
@@ -9556,6 +9642,11 @@ lodash.get@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.isempty@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
+  integrity sha1-b4bL7di+TsmHvpqvM8loTbGzHn4=
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -11595,6 +11686,14 @@ postcss-flexbugs-fixes@^3.0.0:
   dependencies:
     postcss "^6.0.1"
 
+postcss-js@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-2.0.3.tgz#a96f0f23ff3d08cec7dc5b11bf11c5f8077cdab9"
+  integrity sha512-zS59pAk3deu6dVHyrGqmC3oDXBdNdajk4k1RyxeVXCrcEDBUBHoIhE4QTsmhxgzXxsaqFDAkUZfmMa5f/N/79w==
+  dependencies:
+    camelcase-css "^2.0.1"
+    postcss "^7.0.18"
+
 postcss-load-config@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-2.1.0.tgz#c84d692b7bb7b41ddced94ee62e8ab31b417b003"
@@ -11893,6 +11992,15 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.17, postcss@^7.0.5:
   version "7.0.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
   integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.18:
+  version "7.0.32"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
+  integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -12391,6 +12499,11 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-fast-compare@^3.1.1:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
 react-ga@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.7.0.tgz#24328f157f31e8cffbf4de74a3396536679d8d7c"
@@ -12405,6 +12518,16 @@ react-helmet@^5.2.1:
     prop-types "^15.5.4"
     react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
+
+react-helmet@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-6.1.0.tgz#a750d5165cb13cf213e44747502652e794468726"
+  integrity sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.7.2"
+    react-fast-compare "^3.1.1"
+    react-side-effect "^2.1.0"
 
 react-hot-loader@^4.12.11:
   version "4.12.11"
@@ -12452,6 +12575,11 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-side-effect@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
+  integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
 react-transition-group@^4.0.0:
   version "4.2.2"
@@ -12629,6 +12757,11 @@ regenerator-runtime@^0.13.2:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
   integrity sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==
 
+regenerator-runtime@^0.13.4:
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.5.tgz#d878a1d094b4306d10b9096484b33ebd55e26697"
+  integrity sha512-ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==
+
 regenerator-transform@^0.14.0:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/regenerator-transform/-/regenerator-transform-0.14.1.tgz#3b2fce4e1ab7732c08f665dfdb314749c7ddd2fb"
@@ -12642,6 +12775,11 @@ regex-cache@^0.4.2:
   integrity sha512-nVIZwtCjkC9YgvWkpM55B5rBhBYRZhAaJbgcFYXXsHnbZ9UZI9nnVWYZpBlCqv9ho2eZryPnWrZGsOdPwVWXWQ==
   dependencies:
     is-equal-shallow "^0.1.3"
+
+regex-escape@^3.4.8:
+  version "3.4.9"
+  resolved "https://registry.yarnpkg.com/regex-escape/-/regex-escape-3.4.9.tgz#407b413562e2373d56994ff213e693658ea4f8f7"
+  integrity sha512-Cv9rjwyQwVhn3L097ysanWsEElurmxDj6Cc4Ut23z7e6hzRbrNvF3Le7yAciMfuzyb0sZwSr0ZHunMNCIoy2/g==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"

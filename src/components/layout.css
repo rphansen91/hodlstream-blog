@@ -118,19 +118,21 @@ section {
   cursor: pointer;
 }
 
-.border-left-2 {
-  border-left: solid 0.2em;
-}
-
 .border-bottom-2 {
-  border-bottom: solid 0.2em;
+  border-bottom: rgba(255, 255, 255, 0.7) solid 0.2em;
 }
 
 a:hover {
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {  
+.border-left-2 {
+  border-left: rgba(255, 255, 255, 0.7) solid 0.2em;
+}
+}
+
+@media screen and (max-width: 768px) {  
   .App {
     padding-left: 0;
   }

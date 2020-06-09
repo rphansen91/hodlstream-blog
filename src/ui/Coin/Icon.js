@@ -20,7 +20,7 @@ export default ({
 }) => {
   const theme = useTheme();
   const fill = theme.palette.text.secondary;
-  const attrs = Object.assign({ fill }, _attrs);
+  const attrs = Object.assign({ style: { fill } }, _attrs);
   const iconSvg = useMemo(() => getSvg(icon), [icon]);
   const Icon = (
     <svg

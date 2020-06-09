@@ -6,10 +6,9 @@ import { graphql } from "gatsby"
 export default function Template({ data, error }) {
   const { markdownRemark } = data || {}// data.markdownRemark holds your post data
   const { frontmatter, html: htmlContent } = markdownRemark || {}
-  console.log({ frontmatter, error })
   return (
     <Layout>
-      <Post post={{ ...frontmatter, htmlContent }} />
+      <Post post={{ ...frontmatter, htmlContent }} path={`/post/${frontmatter.publishedAt}`} />
     </Layout>
   )
 }

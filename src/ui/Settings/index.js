@@ -21,7 +21,7 @@ export default () => {
 
         <section />
 
-        <Typography variant="h1" color="textPrimary" className="text-center">
+        <Typography variant="h1" color="textPrimary" align="center">
           Settings
         </Typography>
 
